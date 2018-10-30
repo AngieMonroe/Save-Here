@@ -7,7 +7,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Wall from './components/Wall';
 import Notificatio from './components/Notificatio';
-
+import adminView from './components/adminView';
+import adminRutas from './components/adminRutas';
+import Checklist from './components/Checklist';
+import Contact from './components/Contact';
 
 ReactDOM.render(
     <BrowserRouter basename = { process.env.PUBLIC_URL } >
@@ -16,6 +19,10 @@ ReactDOM.render(
               <Route path = '/login' component = { Login } />
               <Route path = '/home' component = { Wall } />
               <Route path = '/notific' component = { Notificatio } />
+              <Route path = '/adminView' component = { adminView } />
+              <Route path = '/adminRutas' component = { adminRutas } />
+              <Route path = '/Checklist' component = { Checklist } />
+              <Route path = '/Contact' component = { Contact } />
         </div>
       </BrowserRouter>, document.getElementById('root'));
 

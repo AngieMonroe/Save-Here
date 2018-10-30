@@ -22,6 +22,22 @@
   color: #61dafb;
 }
 
+.btnes {
+  height: 120px;
+  width: 140px;
+}
+
+#btn-rutas{
+  height: 120px;
+  width: 140px;
+  font-size: 60px;
+
+}
+
+.titlecheck{
+  font-size: 30px
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,3 +46,5 @@
     transform: rotate(360deg);
   }
 }
+
+
