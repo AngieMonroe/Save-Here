@@ -1,6 +1,6 @@
-#SURE here
+# SURE here
 
-##Propósito
+## Propósito
 Transportar niños con seguridad y continua comunicación con padres de familia.
 
 La interfaz  de acompañante está diseñada para hacer más ágil el trabajo de los ayudantes del conductor, ya que mejora notablemente la seguridad en el transporte.
@@ -17,7 +17,7 @@ Con la interfaz de usuarios los Padres estarán más tranquilos, ya que sabrán 
 -Ubicación mediante GPS del autobús escolar y la ruta, pudiendo ver el mapa en tiempo real.
 -Historial de las notificaciones del recorrido.
 
-###Quieres colaborar con el proyecto?
+### Quieres colaborar con el proyecto?
 Por favor realiza un fork y clone y envianos un pull request con tu aportación.
 
 Todas son bienvenidas!
