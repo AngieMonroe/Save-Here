@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import { Input, Button, Container, Row, Col } from 'mdbreact';
-import Logo from '../images/logohere.png'
  
 class Login extends Component {
     constructor(props){
@@ -10,37 +9,20 @@ class Login extends Component {
             user:null,
             name:"",
             email:"",
-             password:"",
+            password:"",
             registrar:"",
             registrarpwd:""
     };
     this.login = this.login.bind(this);
     this.createUser = this.createUser.bind(this);
-    this.handleAuth = this.handleAuth.bind(this);// referenciamos al metodo
-    this.handleLogout = this.handleLogout.bind(this);
     this.handleChange = this.handleChange.bind(this);
         }
-
-        handleAuth(){ 
-            const provider = new firebase.auth.GoogleAuthProvider(); // hace la funcionalidad de google como proveedor
-            firebase.auth().signInWithPopup(provider) //llama a la api de firebase 
-            .then(result => console.log(`${result.user.email} inicio sesion`))
-            .catch(error => console.log(error.message));
-          }
-
-          handleLogout(){
-            firebase.auth().signOut()
-            .then(response  => console.log(`${response.user.email} cerro sesion`))
-            .catch(error => console.log(error.message));
-          }
 
           login(e){
             e.preventDefault();
             firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-            .then((u)=>{
-            })
+            .then(result => this.props.history.push('/home'))
             .catch((error)=>{
-                
             console.log(error);
             });    
             
@@ -89,19 +71,18 @@ class Login extends Component {
                     </div> */}
                     
         <Container>
-        <Row>
-          <Col md="6">
-          <img src={Logo} className="imagen-fluid" alt="Logo Save Here"></img>
+        <Row className="row justify-content-md-center mt-5">
+          <Col sm="10" md="6">
             <form>
-              <p className="h5 text-center mb-2">Sign up</p>
+              <p className="h3 text-center mb-2">Sign up</p>
               <div className="grey-text" >
-                <Input label="Your email"  group type="email" onChange={this.handleChange} validate error="Error" success="Correcto" />
-                <Input label="Your password"  group type="password"  onChange={this.handleChange} validate/>
+                <Input label="Your email"  group type="email" name="email" onChange={this.handleChange} validate error="Error" success="Correcto" />
+                <Input label="Your password"  group type="password"  name="password" onChange={this.handleChange} validate/>
               </div>
-              <div className="grey-text" >
+              <div className="grey-text text-center mt-3" >
               <Button className="btn btn-dark" type="submit" onClick={this.login}>Login</Button>
               </div>
-              <div className="grey-text" >
+              <div className="grey-text text-center mt-5" >
               <Button className="btn btn-dark" type="submit" data-toggle="modal" data-target="#exampleModal">Registrar</Button>
               </div>
             </form>

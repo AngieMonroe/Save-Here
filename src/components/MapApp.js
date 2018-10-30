@@ -5,7 +5,7 @@ class MapApp extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        url: 'https://image.maps.api.here.com/mia/1.6/mapview?w=600&h=300&poitxs=16&poitxc=black&poifc=yellow',
+        url: 'https://image.maps.api.here.com/mia/1.6/mapview?w=370&h=400&poitxs=16&poitxc=black&poifc=yellow',
       }
       console.log(props)
     }
