@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Logo from '../images/logohere.png'
 import { Navbar, NavbarBrand, NavbarNav,  NavItem, Button, Fa } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import firebase from 'firebase';
