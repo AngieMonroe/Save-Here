@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LocationApp from './LocationApp';
 import NavbarApp from './NavbarApp';
-import { TableBody } from 'mdbreact';
+import { Fa } from 'mdbreact';
 
 
 class WallApp extends Component {
@@ -9,10 +9,14 @@ class WallApp extends Component {
         return(
             <section>
             <NavbarApp />
-            <input className="mt-3 mb-3">
-            </input>
+            <div className="container">
+            <Fa icon="address-card-o" className="mt-2 mb-2" size="2x"/> <strong>Daniel López Duran <br/> Viaje en Curso </strong>
             <LocationApp />
-            <p>Hora de llegada aproximada a colegio las Américas</p>
+            <p className="h5 mt-3">Hora de llegada al Colegio: 7:55 AM</p>
+            <p className="h5">Hora de Recogida: 7:30 AM</p>
+
+            </div>
+
             
             </section>
         )

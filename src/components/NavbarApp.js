@@ -19,16 +19,25 @@ class NavbarApp extends Component {
         this.props.history.push('/login')
     }
 
+    notifications(){
+        this.props.history.push('/notific')
+    }
+
+    wall(){
+        this.props.history.push('/home')
+    }
+
     render() {
         return (
             <Router>
                 <Navbar color="indigo darken-4" dark expand="md" scrolling>
                     <NavbarBrand href="/">
-                    <p>Save Here</p>
+                    <p>SAVE here</p>
                     </NavbarBrand>
                         <NavbarNav right>
                           <NavItem>
-                            <Button color="black" size="sm" className="rounded"><Fa icon="bell" size="2x"/></Button>
+                          <Button color="black" size="sm" className="rounded"onClick={this.wall.bind(this)}><Fa icon="arrow-left" size="2x"/></Button>
+                            <Button color="black" size="sm" className="rounded"onClick={this.notifications.bind(this)}><Fa icon="bell" size="2x"/></Button>
                             <Button color="black" size="sm" className="rounded" onClick={this.logout.bind(this)}><Fa icon="sign-out" size="2x"/></Button>
                           </NavItem>
                         </NavbarNav>

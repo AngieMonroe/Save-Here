@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Wall from './components/Wall';
+import Notificatio from './components/Notificatio';
 
 
 ReactDOM.render(
@@ -14,6 +15,7 @@ ReactDOM.render(
               <Route exact path = '/' component = { App } />
               <Route path = '/login' component = { Login } />
               <Route path = '/home' component = { Wall } />
+              <Route path = '/notific' component = { Notificatio } />
         </div>
       </BrowserRouter>, document.getElementById('root'));
 
