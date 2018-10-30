@@ -86,6 +86,8 @@ class Login extends Component {
               <Button className="btn btn-dark" type="submit" data-toggle="modal" data-target="#exampleModal">Registrar</Button>
               </div>
             </form>
+
+            ]
           </Col>
         </Row>
       </Container>
