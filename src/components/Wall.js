@@ -14,7 +14,6 @@ class WallApp extends Component {
             <LocationApp />
             <p className="h5 mt-3">Hora de llegada al Colegio: 7:55 AM</p>
             <p className="h5">Hora de Recogida: 7:30 AM</p>
-
             </div>
 
             
