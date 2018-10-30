@@ -72,4 +72,4 @@ class adminView extends  Component {
 
         }
 
-        export default adminView;
+        export default withRouter(adminView);

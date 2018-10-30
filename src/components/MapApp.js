@@ -7,13 +7,12 @@ class MapApp extends Component {
       this.state = {
         url: 'https://image.maps.api.here.com/mia/1.6/mapview?w=352&h=400&poitxs=16&poitxc=black&poifc=yellow',
       }
-      console.log(props)
     }
 
     
 
     render() {
-        console.log(this.props.coord)
+        // console.log(this.props.coord)
       return (
         <img
           src={ this.state.url

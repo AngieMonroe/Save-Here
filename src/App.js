@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import fire from './components/Fire';
-//import NavbarPage from './component/Navbar';
-//import Notify from './component/Notify';
 import './App.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 

@@ -11,8 +11,6 @@ class Geolocalizacion extends Component {
             + '&searchtext=425+W+Randolph+Chicago',
         data: null
       }
-      console.log(this.state.url)
-
     }
     componentDidMount(){
         fetch(this.state.url)
@@ -23,8 +21,6 @@ class Geolocalizacion extends Component {
     }
     
     render() {
-        console.log(this.state.data)
-
       return (
         <div>
         

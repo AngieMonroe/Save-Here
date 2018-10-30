@@ -9,6 +9,7 @@ class Notificatio extends  Component {
             <section>
             <NavbarApp />
             <div className="container">
+            <p className="mt-3">Notificaciones</p>
             <table className="table mt-5">
             <tbody>
                 <tr>

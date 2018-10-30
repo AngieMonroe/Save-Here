@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import { Input, Button, Container, Row, Col } from 'mdbreact';
+import { withRouter } from 'react-router-dom';
+import './Login.css'
+
  
 class Login extends Component {
     constructor(props){
@@ -14,7 +17,7 @@ class Login extends Component {
             registrarpwd:""
     };
     this.login = this.login.bind(this);
-    this.createUser = this.createUser.bind(this);
+    this.registry = this.registry.bind(this);
     this.handleChange = this.handleChange.bind(this);
         }
 
@@ -27,17 +30,9 @@ class Login extends Component {
             });    
             
             }
-         createUser(e) {
-            e.preventDefault();
-            firebase.auth().createUserWithEmailAndPassword(this.state.registrar, this.state.registrarpwd)
-            .then(() => {
-              alert('Cuenta creada exitosa')
-              const userName = this.state.email;
-              console.log(userName);
-            })
-                .catch((error) => {
-                    console.log(error.message);
-                })
+         registry(e) {
+           e.preventDefault()
+           this.props.history.push('/registro')
         }
 
         handleChange(e){
@@ -47,32 +42,12 @@ class Login extends Component {
           }) 
           }
 
-
           render(){
               return(
-                <div>
-                {/* <div className="App-header">
-                    <h1 color="white">SchoolHere</h1>
-                </div>
-                <form className="container">
-                    <p>Forma parte de nuestra comunidad: </p>
-                    <input id="inputEmail" value={this.state.email} onChange={this.handleChange} type="email"name='email' className="Form-input "  placeholder="Email" />
-                    
-                    <input id="inputPassword" className="Form-input" value={this.state.password} onChange={this.handleChange} type="password"name='password'placeholder="Password"/>
-                    <button  type="button" className="btn btn-outline-dark" id="btn-crear" data-toggle="modal" data-target="#exampleModal">Registrar</button>
-                    <button className="btn btn-outline-dark" id="btn-sing" onClick={this.login}>SingUp</button>
-                </form>
-                    <button className="btn btn-outline-dark" id="btn-google" onClick={this.handleAuth}>
-                    <img src={GoogleLogo} alt="" /> Login Google</button>
-
-                    <div class="md-form">
-                    <input type="text" id="form1" class="form-control"/>
-                    <label for="form1">Example label</label>
-                    </div> */}
-                    
-        <Container>
-        <Row className="row justify-content-md-center mt-5">
-          <Col sm="10" md="6">
+        <Container className="text-center">
+        <Row className="mt-5 row justify-content-md-center">
+          <Col   sm="10" md="6">
+          <p className="h1 indigo-text m-5">SURE here</p>
             <form>
               <p className="h3 text-center mb-2">Sign up</p>
               <div className="grey-text" >
@@ -82,45 +57,12 @@ class Login extends Component {
               <div className="grey-text text-center mt-3" >
               <Button className="btn btn-dark" type="submit" onClick={this.login}>Login</Button>
               </div>
-              <div className="grey-text text-center mt-5" >
-              <Button className="btn btn-dark" type="submit" data-toggle="modal" data-target="#exampleModal">Registrar</Button>
-              </div>
             </form>
 
-            ]
           </Col>
         </Row>
-      </Container>
-
-
-
-
-              {/*Modal*/} 
-
-            {/* <div className="modal fade" id="exampleModal"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" role="document">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalCenterTitle">Registrate</h5>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                    <div className="row">
-                       <input type="text" className="form-control registry-btn mr-4 ml-4 mt-2 mb-2" placeholder="Nombre" id="registrarName"   name='name'  value={this.state.name} onChange={this.handleChange} /> 
-                       <input type="email" className="form-control registry-btn mr-4  mr-4 ml-4 mt-2 mb-2"   placeholder="Correo" id="registrarEmail" name='registrarEmail' value={this.state.registrar} onChange={this.handleChange}/>
-                       <input type="password" className="form-control registry-btn mr-4 mr-4 ml-4 mt-2 mb-2"  placeholder="Contraseña" id="registrarPassword" name='registrarPassword' value={this.state.registrarpwd} onChange={this.handleChange}/>            
-                    </div>
-                    <div className="modal-footer">
-                     <button type="button" onClick={this.createUser} className="btn btn-dark" id="Registrar">Enviar</button>
-                     <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>  
-                    </div>
-                 </div>
-                </div>
-                </div>*/}
-              </div> 
-                 
+      </Container>                 
               );
           }
     }
-    export default Login;
+    export default withRouter(Login);

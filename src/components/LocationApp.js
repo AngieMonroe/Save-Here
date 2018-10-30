@@ -29,7 +29,7 @@ class LocationApp extends Component {
   }
   
   render() {
-    console.log(this.state.value)
+    // console.log(this.state.value)
     return (
       <div>
       <MapApp app_id = "75jBHP2yBdJfYYdm26wV" app_code = "PP2nozpXhsRLbtdZWSoWxg" app_coord = {this.state.value} app_zoom = "14" />

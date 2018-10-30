@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import NavbarApp from './NavbarApp';
-import LocationApp from './LocationApp';
-import { Button, Image } from 'mdbreact';
 import maparutas from '../images/maparutas.PNG';
 import FooterApp from './Footer';
 
@@ -15,20 +13,16 @@ class adminRutas extends  Component {
         return (
      <div>
          <NavbarApp/>
-         <p>Numero de ruta :5</p>
-         <p><strong>Tipo de ruta: En trayecto a Colegio las Americas</strong></p>
-         <img  id="rutas" src={maparutas}></img>
-
+         <p className="text-center mt-2">Numero de ruta :5</p>
+         <p className="text-center"><strong>Tipo de ruta: En trayecto a Colegio las Americas</strong></p>
+         <div className="text-center">
+         <img  id="rutas" src={maparutas} alt="mapa de rutas"></img>
+         </div>
          <FooterApp/>
-         {/* <LocationApp /> */}
 
-           
-
-        </div>
-                
+        </div>   
                 )
             }
-
         }
 
         export default adminRutas;
